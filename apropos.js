@@ -1,28 +1,27 @@
 import React from 'react';
-import {Text,View,Image, TextInput} from 'react-native';
-import Icon from '@expo/vector-icons/AntDesign';
-import { block } from 'react-native-reanimated';
+import { Text, View, Image, TextInput } from 'react-native';
 
-export default class Login extends React.Component{
 
-    render(){
-        const {navigate} = this.props.navigation
-        return(
-            <View style={{width:"100%",height:"100%"}}>
-                <Image source ={require('../images/image.png')}
-                    style={{width:"90%",height:"45%",textAlign:"center",marginLeft:"8%",marginRight:"auto"}}
-                 
-                    
+export default class apropos extends React.Component {
 
-                    
+    render() {
+        const { navigate } = this.props.navigation
+        return (
+            <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+                <Image source={require('../images/P.png')}
+                    style={{ width: '60%', height: "30%", marginTop: 30 }}
                 />
+
+
                 <Text
-                 style={{
-                     fontSize:30,
-                     fontFamily:"SemiBold",
-                     alignSelf:"center",
-                 }}
-                >Welcome</Text>
+                    style={{
+                        fontSize: 25,
+                        fontFamily: "SemiBold",
+                        alignSelf: "center",
+                    }}
+                >WELCOM TO PARK FINDER</Text>
+
+
 
                 <Text
                 style={{
@@ -36,69 +35,62 @@ export default class Login extends React.Component{
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
                 </Text>
 
-                <View style={{
-                    flexDirection:"row",
-                    alignItems:"center",
-                    marginHorizontal:55,
-                    borderWidth:2,
-                    marginTop:50,
-                    paddingHorizontal:10,
-                    borderColor:"#1bacc5",
-                    borderRadius:23,
-                    paddingVertical:2
-                }}>
-                    <Icon name="mail" color="#00716F" size={24}/>
-                    <TextInput 
-                        style={{paddingHorizontal:10}}
-                    />
-
+                <View
                     
+                    style={{
+                        marginHorizontal: 55,
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginTop: 180,
+                        backgroundColor: "#FF0000",
+                        paddingVertical: 10,
+                        borderRadius: 23,
+                        width: '80%'
+
+                    }}>
+                    <Text
+                        onPress={() => navigate('Login')}
+                        style={{
+                            color: "white",
+                            fontFamily: "SemiBold",
+                            width: "100%",
+                            textAlign: 'center'
+                        }}>SING IN </Text>
 
                 </View>
                 <View style={{
-                    flexDirection:"row",
-                    alignItems:"center",
-                    marginHorizontal:55,
-                    borderWidth:2,
-                    marginTop:15,
-                    paddingHorizontal:10,
-                    borderColor:"#1bacc5",
-                    borderRadius:23,
-                    paddingVertical:2
+                    marginHorizontal: 55,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginTop: 30,
+                    backgroundColor: "#FF0000",
+                    paddingVertical: 10,
+                    borderRadius: 23,
+                    width: '80%'
+
                 }}>
-                    <Icon name="mail" color="#00716F" size={24}/>
-                    <TextInput 
-                        style={{paddingHorizontal:10}}
-                    />
-
-                    
-
+                   <Text
+                        onPress={() => navigate('Register')}
+                        style={{
+                            color: "white",
+                            fontFamily: "SemiBold",
+                            width: "100%",
+                            textAlign: 'center'
+                        }}>SING UP</Text>
                 </View>
 
-                <View style={{
-                    marginHorizontal:55,
-                    alignItems:"center",
-                    justifyContent:"center",
-                    marginTop:30,
-                    backgroundColor:"#1bacc5",
-                    paddingVertical:10,
-                    borderRadius:23
-                }}>
-                    <Text style={{
-                        color:"white",
-                        fontFamily:"SemiBold"
-                    }}>Already a member</Text>
-                </View>
-                <Text 
-                
-                onPress={()=>navigate('Register')}
-                
-                style={{
-                    alignSelf:"center",
-                    color:"#1bacc5",
-                    fontFamily:"SemiBold",
-                    paddingVertical:30
-                }}>New User</Text>
+
+               
+                <Text
+                  style={{
+                      alignSelf: "center",
+                      color: "#1bacc5",
+                      fontFamily: "SemiBold",
+                    paddingVertical: 50,
+                    marginTop:50
+                   }}>LET'S GO</Text>
+
+
             </View>
         )
     }
